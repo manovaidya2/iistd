@@ -39,8 +39,8 @@ app.use("/api/gallery", galleryRoutes);
 app.use("/api/contact", contactRoutes);
 
 // Health check
-app.get("/", (req, res) => {
-  res.send("IISD API running...");
+app.get("/api/health", (req, res) => {
+  res.json({ success: true, message: "API healthy" });
 });
 
 // DB Connect
