@@ -18,12 +18,15 @@ app.use(
     origin: [
       "http://localhost:5173",
       "http://localhost:5174",
-      "https://blog-1-rqz1.onrender.com",
+      "http://api.iist.ind.in",
+      "https://iist.ind.in",
+      "https://admin.iist.ind.in"
     ],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     credentials: true,
   })
 );
+
 app.use(express.json());
 
 // 🔥 Serve uploaded images (frontend will call http://localhost:5000/uploads/xyz.png)
@@ -34,7 +37,6 @@ app.use("/api/skill-programs", skillProgramRoutes);
 app.use("/api/students", studentRoutes);
 app.use("/api/gallery", galleryRoutes);
 app.use("/api/contact", contactRoutes);
-
 
 // Health check
 app.get("/", (req, res) => {
