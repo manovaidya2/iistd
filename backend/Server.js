@@ -7,8 +7,7 @@ import studentRoutes from "./Routes/studentRoutes.js";
 import galleryRoutes from "./Routes/galleryRoutes.js";
 import contactRoutes from "./Routes/contactRoutes.js";
 
-
-dotenv.config(); // 👈 Make sure to load .env
+dotenv.config();
 
 const app = express();
 
@@ -28,20 +27,18 @@ app.use(
 );
 
 app.use(express.json());
-
-// 🔥 Serve uploaded images (frontend will call http://localhost:5000/uploads/xyz.png)
 app.use("/uploads", express.static("uploads"));
+
+// ✅ Health check FIRST
+app.get("/api/health", (req, res) => {
+  res.json({ success: true, message: "API healthy" });
+});
 
 // Routes
 app.use("/api/skill-programs", skillProgramRoutes);
 app.use("/api/students", studentRoutes);
 app.use("/api/gallery", galleryRoutes);
 app.use("/api/contact", contactRoutes);
-
-// Health check
-app.get("/api/health", (req, res) => {
-  res.json({ success: true, message: "API healthy" });
-});
 
 // DB Connect
 mongoose
@@ -52,7 +49,6 @@ mongoose
   .then(() => console.log("✅ MongoDB connected"))
   .catch((err) => console.error("❌ MongoDB connection error:", err));
 
-// Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
