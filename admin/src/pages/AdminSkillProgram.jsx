@@ -88,7 +88,7 @@ try {
   const handleEdit = (program) => {
     setEditId(program._id);
     setTitle(program.title);
-    setPreviewImage(`http://localhost:5000/uploads/${program.image}`);
+    setPreviewImage(`https://api.iist.ind.in/uploads/${program.image}`);
     setImage(null);
   };
 
@@ -193,7 +193,7 @@ try {
                     <td className="px-4 py-3">
                       {p.image ? (
                         <img
-                          src={`http://localhost:5000/uploads/${p.image}`}
+                          src={`https://api.iist.ind.in/uploads/${p.image}`}
                           alt={p.title}
                           className="w-24 h-16 object-cover rounded border"
                         />

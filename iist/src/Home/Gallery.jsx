@@ -100,7 +100,7 @@ export default function Gallery() {
   const [programs, setPrograms] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/gallery")
+    fetch("https://api.iist.ind.in/api/gallery")
       .then((res) => res.json())
       .then((data) => setPrograms(data));
   }, []);

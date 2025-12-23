@@ -8,7 +8,7 @@ export default function StudentResult({ studentData }) {
   // ✅ PDF Download Function
  const handleDownloadPDF = async (id) => {
   try {
-    const response = await fetch(`http://localhost:5000/api/students/download/${id}`, {
+    const response = await fetch(`https://api.iist.ind.in/api/students/download/${id}`, {
       method: "GET",
     });
 

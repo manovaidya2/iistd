@@ -8,7 +8,7 @@ export default function AdminGallery() {
 
   const fetchGallery = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/gallery");
+      const res = await fetch("https://api.iist.ind.in//api/gallery");
       const data = await res.json();
       setItems(data);
     } catch (err) {
@@ -32,7 +32,7 @@ const handleUpload = async (e) => {
   formData.append("image", image);
 
   try {
-    const res = await fetch("http://localhost:5000/api/gallery", {
+    const res = await fetch("https://api.iist.ind.in/api/gallery", {
       method: "POST",
       body: formData,
     });
@@ -50,7 +50,7 @@ const handleUpload = async (e) => {
 
 const handleDelete = async (id) => {
   try {
-    const res = await fetch(`http://localhost:5000/api/gallery/${id}`, {
+    const res = await fetch(`https://api.iist.ind.in/api/gallery/${id}`, {
       method: "DELETE",
     });
 
@@ -94,7 +94,7 @@ const handleDelete = async (id) => {
         {items.map((item) => (
           <div key={item._id} className="relative border rounded shadow">
             <img
-              src={`http://localhost:5000${item.image}`}
+              src={`https://api.iist.ind.in${item.image}`}
               alt={item.title}
               className="w-full h-32 object-cover"
             />

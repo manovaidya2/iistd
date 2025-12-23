@@ -39,7 +39,7 @@ export default function SkillDevelopmentPrograms() {
             className="relative rounded-xl overflow-hidden shadow-md group"
           >
             <img
-              src={`http://localhost:5000/uploads/${program.image}`}
+              src={`https://api.iist.ind.in/uploads/${program.image}`}
               alt={program.title}
               className="w-full h-52 object-cover transform transition-transform duration-500 group-hover:scale-110"
             />

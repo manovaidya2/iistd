@@ -95,7 +95,7 @@ const handleSubmit = async (e) => {
   }
 
   try {
-    await axios.post("http://localhost:5000/api/students/upload", form);
+    await axios.post("https://api.iist.ind.in/api/students/upload", form);
     toast.success("Result uploaded successfully!");
 
     // Reset form
