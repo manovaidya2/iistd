@@ -91,12 +91,13 @@ export default function StudentResult({ studentData }) {
           {/* Result Box */}
           
 
-          {/* Remarks */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-2 text-xs sm:text-sm font-semibold mb-6">
-            <p>Percentage: {studentData.result.percentage}</p>
-            <p>Result: {studentData.result.status}</p>
-            <p>Grade: {studentData.result.grade}</p>
-          </div>
+  <p>Total Marks: {studentData.result.totalFull}</p>
+  <p>Marks Obtained: {studentData.result.totalObt}</p>
+  <p>Percentage: {studentData.result.percentage}</p>
+  <p>Grade: {studentData.result.grade}</p>
+</div>
+
 <div className="flex flex-wrap justify-end gap-2 sm:gap-4 mb-6">
             <div className="bg-red-100 text-red-600 px-4 py-2 rounded font-semibold text-xs sm:text-sm">
               RESULT
