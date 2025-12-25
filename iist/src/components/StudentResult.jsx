@@ -43,7 +43,7 @@ export default function StudentResult({ studentData }) {
         <div className="p-4 sm:p-6">
           {/* Course Heading */}
           <h3 className="text-center font-semibold text-base sm:text-lg mb-6 mt-4">
-            {studentData.result.course} - SEMESTER
+            {studentData.result.course} 
           </h3>
 
           {/* Student Details */}
@@ -57,7 +57,7 @@ export default function StudentResult({ studentData }) {
           </div>
 
           {/* Subjects Table */}
-          <div className="overflow-x-auto">
+          {/* <div className="overflow-x-auto">
             <table className="w-full border-collapse text-xs sm:text-sm mb-6">
               <thead>
                 <tr className="bg-gray-200">
@@ -68,7 +68,7 @@ export default function StudentResult({ studentData }) {
                   <th className="border px-2 py-1">Marks Obtained</th>
                 </tr>
               </thead>
-              <tbody>
+              {/* <tbody>
                 {studentData.result.subjects.map((s, i) => (
                   <tr key={i}>
                     <td className="border px-2 py-1 text-center">{s.sno}</td>
@@ -84,19 +84,12 @@ export default function StudentResult({ studentData }) {
                   <td className="border px-2 py-1 text-center">{studentData.result.totalPass}</td>
                   <td className="border px-2 py-1 text-center">{studentData.result.totalObt}</td>
                 </tr>
-              </tbody>
-            </table>
-          </div>
+              </tbody> */}
+            {/* </table> */}
+          {/* </div> */} 
 
           {/* Result Box */}
-          <div className="flex flex-wrap justify-end gap-2 sm:gap-4 mb-6">
-            <div className="bg-red-100 text-red-600 px-4 py-2 rounded font-semibold text-xs sm:text-sm">
-              RESULT
-            </div>
-            <div className="bg-blue-600 text-white px-4 py-2 rounded font-semibold text-xs sm:text-sm">
-              {studentData.result.status}
-            </div>
-          </div>
+          
 
           {/* Remarks */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-2 text-xs sm:text-sm font-semibold mb-6">
@@ -104,7 +97,14 @@ export default function StudentResult({ studentData }) {
             <p>Result: {studentData.result.status}</p>
             <p>Grade: {studentData.result.grade}</p>
           </div>
-
+<div className="flex flex-wrap justify-end gap-2 sm:gap-4 mb-6">
+            <div className="bg-red-100 text-red-600 px-4 py-2 rounded font-semibold text-xs sm:text-sm">
+              RESULT
+            </div>
+            <div className="bg-blue-600 text-white px-4 py-2 rounded font-semibold text-xs sm:text-sm">
+              {studentData.result.status}
+            </div>
+          </div>
           {/* Notes */}
           <div className="text-[10px] sm:text-xs text-gray-600 space-y-2">
             <p>
@@ -118,7 +118,7 @@ export default function StudentResult({ studentData }) {
               verification. The Delhi University original grade report will
               be the final one.
             </p>
-            <p>
+            {/* <p>
               NOTE: For immediate assistance, please email us at{" "}
               <a href="mailto:digital@dgu.ac.in" className="text-blue-900 underline">
                 digital@dgu.ac.in
@@ -127,18 +127,18 @@ export default function StudentResult({ studentData }) {
               <a href="mailto:dguniversityofficial@gmail.com" className="text-blue-900 underline">
                 dguniversityofficial@gmail.com
               </a>.
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
 
       {/* Download Button */}
-      <button
+      {/* <button
   onClick={() => handleDownloadPDF(studentData._id)}
   className="mt-4 px-6 py-2 bg-green-600 text-white font-semibold rounded hover:bg-green-700 transition"
 >
   Download PDF
-</button>
+</button> */}
 
     </div>
   );

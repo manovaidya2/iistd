@@ -17,6 +17,7 @@ import CandidateThroughTrainingForm from "./Student Zone/CandidateThroughTrainin
 import SelectExamDate from "./Student Zone/SelectExamDate";
 import ApplyFranchisee from "./Franchise/ApplyFranchisee";
 import ContactUs from "./pages/ContactUs";
+import SkillProgramDetails from "./components/SkillProgramDetails";
 
 
 function App() {
@@ -39,6 +40,10 @@ function App() {
         <Route path="/select-exam-date" element={<SelectExamDate />} /> {/* Fallback route */}
         <Route path="/applyfranchisee" element={<ApplyFranchisee />} /> {/* Fallback route */}
         <Route path="/contact-us" element={<ContactUs />} /> {/* Fallback route */}
+         <Route
+          path="/skill-programs/:id"
+          element={<SkillProgramDetails />}
+        />
       </Routes>
       <Footer />
     </Router>

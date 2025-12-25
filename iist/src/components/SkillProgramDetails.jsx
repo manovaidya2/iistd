@@ -1,0 +1,84 @@
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import axios from "../api/axiosInstance";
+
+const CourseSection = ({ title, courses }) => {
+  if (!courses || courses.length === 0) return null;
+
+  return (
+    <div className="mb-12 flex justify-center">
+      <div className="w-full max-w-4xl rounded-xl shadow-lg overflow-hidden bg-white">
+
+        {/* Heading CENTER */}
+        <div className="bg-blue-900 text-white px-6 py-4 text-lg font-semibold text-center">
+          {title}
+        </div>
+
+        <table className="w-full">
+          <thead className="bg-blue-100">
+            <tr>
+              {/* Header CENTER */}
+              <th className="px-6 py-3 text-left">
+                Program Name
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {courses.map((course, index) => (
+              <tr key={index} className="border-b">
+                {/* 👇 CONTENT LEFT */}
+                <td className="px-6 py-3 text-left">
+                  🎓 {course.name}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  );
+};
+
+
+
+export default function SkillProgramDetails() {
+  const { id } = useParams();
+  const [courses, setCourses] = useState(null);
+
+ useEffect(() => {
+  const fetchCourses = async () => {
+    try {
+      const res = await axios.get(
+        `/skillprogramdetails/${id}/courses`
+      );
+      setCourses(res.data.courses);
+    } catch (err) {
+      console.error("API Error:", err);
+    }
+  };
+  fetchCourses();
+}, [id]);
+
+  if (!courses) {
+    return <p className="text-center mt-10">Loading...</p>;
+  }
+
+  return (
+    <div className="max-w-6xl mx-auto px-4 py-10">
+      <CourseSection
+        title="Certificate Courses"
+        courses={courses.certificate}
+      />
+      <CourseSection
+        title="Diploma Courses"
+        courses={courses.diploma}
+      />
+      <CourseSection
+        title="Advanced Diploma Courses"
+        courses={courses.advancedDiploma}
+      />
+    </div>
+  );
+}
