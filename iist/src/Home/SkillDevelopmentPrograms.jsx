@@ -37,9 +37,9 @@ export default function SkillDevelopmentPrograms() {
               className="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="bg-black bg-opacity-60 text-white text-center py-2 font-semibold">
-              {program.title}
+              {program.name}
             </div>
-          </div>
+          </div>  
         ))}
       </div>
     </div>
