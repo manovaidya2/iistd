@@ -13,6 +13,7 @@ import ContactList from "./pages/ContactList";
 import SkillProgramDetails from "./pages/SkillProgramDetails";
 
 import ProgramListWithCourses from "./pages/ProgramListWithCourses";
+import AdminAdmissionList from "./pages/AdminAdmissionList";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/contact-list" element={<Layout><ContactList /></Layout>} />
           <Route path="/skill-program-details" element={<Layout><SkillProgramDetails /></Layout>} />
           <Route path="/program-course"element={<Layout><ProgramListWithCourses /></Layout>} />
+          <Route path="/admin-admission-list" element={<Layout><AdminAdmissionList /></Layout>} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>

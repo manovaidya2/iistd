@@ -7,6 +7,7 @@ import studentRoutes from "./Routes/studentRoutes.js";
 import galleryRoutes from "./Routes/galleryRoutes.js";
 import contactRoutes from "./Routes/contactRoutes.js";
 import skillProgramCourseRoutes from "./Routes/skillProgramCourseRoutes.js";
+import admissionRoutes from "./Routes/admissionRoutes.js";
 
 dotenv.config();
 
@@ -41,6 +42,7 @@ app.use("/api/students", studentRoutes);
 app.use("/api/gallery", galleryRoutes);
 app.use("/api/contact", contactRoutes);
 app.use("/api/skillprogramdetails", skillProgramCourseRoutes);
+    app.use("/api", admissionRoutes); 
 
 // DB Connect
 mongoose

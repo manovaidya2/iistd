@@ -19,6 +19,7 @@ import ApplyFranchisee from "./Franchise/ApplyFranchisee";
 import ContactUs from "./pages/ContactUs";
 import SkillProgramDetails from "./components/SkillProgramDetails";
 import ScrollToTop from "./components/ScrollToTop";
+import AdmissionForm from "./Student Zone/AdmissionForm";
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
         <Route path="/select-exam-date" element={<SelectExamDate />} /> {/* Fallback route */}
         <Route path="/applyfranchisee" element={<ApplyFranchisee />} /> {/* Fallback route */}
         <Route path="/contact-us" element={<ContactUs />} /> {/* Fallback route */}
+        <Route path="/admission-form" element={<AdmissionForm />} />
          <Route
           path="/skill-programs/:id"
           element={<SkillProgramDetails />}

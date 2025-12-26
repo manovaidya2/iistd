@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "../api/axiosInstance";
+import DownloadsSection from "../Student Zone/DownloadsSectionDetails";
 
 /* ================= COURSE SECTION ================= */
 const CourseSection = ({ title, courses }) => {
@@ -111,6 +112,7 @@ export default function SkillProgramDetails() {
           courses={courses?.advancedDiploma}
         />
       </div>
+      <DownloadsSection />
     </div>
   );
 }
