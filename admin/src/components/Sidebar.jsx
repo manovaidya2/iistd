@@ -62,7 +62,7 @@ const Sidebar = () => {
               {openForms && (
                 <ul className="ml-6 mt-2 space-y-2 text-sm">
                   <li><Link to="/admin-admission-list" className="block hover:text-blue-400">Student Admission Form</Link></li>
-                  <li><Link to="/exam-form" className="block hover:text-blue-400">Exam Form</Link></li>
+                  <li><Link to="/examination-data" className="block hover:text-blue-400">Exam Form</Link></li>
                   <li><Link to="/self-declaration" className="block hover:text-blue-400">Self Declaration</Link></li>
                   <li><Link to="/certificate-reissue" className="block hover:text-blue-400">Certificate Reissue Form</Link></li>
                   <li><Link to="/internship-form" className="block hover:text-blue-400">Internship Form</Link></li>
