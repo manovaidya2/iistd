@@ -1,5 +1,5 @@
 import React from "react";
-import bannerImage from "../images/banner.webp"; // 👈 apna image path
+import bannerImage from "../images/2.webp"; // 👈 apna image path
 
 export default function Banner() {
   return (

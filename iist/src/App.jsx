@@ -18,11 +18,13 @@ import SelectExamDate from "./Student Zone/SelectExamDate";
 import ApplyFranchisee from "./Franchise/ApplyFranchisee";
 import ContactUs from "./pages/ContactUs";
 import SkillProgramDetails from "./components/SkillProgramDetails";
+import ScrollToTop from "./components/ScrollToTop";
 
 
 function App() {
   return (
     <Router>
+      <ScrollToTop/>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} /> {/* Home route */}
