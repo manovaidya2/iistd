@@ -85,7 +85,7 @@ export default function DownloadsSection() {
   </a>
 
   <a
-    href="/exam-form"
+    href="/examination-form"
     className="bg-[#123764] text-white py-6 px-5 rounded-2xl shadow-md hover:shadow-lg 
                hover:scale-[1.03] transition-transform flex flex-col items-center 
                justify-center gap-3"
