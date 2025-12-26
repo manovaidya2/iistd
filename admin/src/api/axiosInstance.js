@@ -2,8 +2,8 @@ import axios from "axios";
 
 // ✅ Axios instance create kar rahe hain
 const axiosInstance = axios.create({
-  // baseURL: "https://api.iist.ind.in/api", 
-  baseURL: "http://localhost:5001/api", 
+  baseURL: "https://api.iist.ind.in/api", 
+  // baseURL: "http://localhost:5001/api", 
   timeout: 0, // request timeout (optional)
   headers: {
     "Content-Type": "application/json",

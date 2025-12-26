@@ -7,7 +7,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { MdMenu, MdClose } from "react-icons/md";
-import logo from "../images/logo (2).jpeg";
+import logo from "../images/logo transparent.webp";
 import image1 from "../images/Azadi-Ka-Amrit.597390719c236104560f.webp";
 import image2 from "../images/g20.719c747b9026a83a245b.webp";
 import image3 from "../images/skill-india.496d43bf990bfdbf029b.webp";

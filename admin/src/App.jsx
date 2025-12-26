@@ -12,6 +12,8 @@ import "react-toastify/dist/ReactToastify.css";
 import ContactList from "./pages/ContactList";
 import SkillProgramDetails from "./pages/SkillProgramDetails";
 
+import ProgramListWithCourses from "./pages/ProgramListWithCourses";
+
 function App() {
   return (
     <>
@@ -25,6 +27,7 @@ function App() {
           <Route path="/admin-gallery" element={<Layout><AdminGallery /></Layout>} />
           <Route path="/contact-list" element={<Layout><ContactList /></Layout>} />
           <Route path="/skill-program-details" element={<Layout><SkillProgramDetails /></Layout>} />
+          <Route path="/program-course"element={<Layout><ProgramListWithCourses /></Layout>} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>

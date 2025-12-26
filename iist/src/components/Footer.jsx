@@ -1,6 +1,6 @@
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 import React from "react";
-import logo from "../images/IISD.855d404de3a326ca6293.webp"; // apna logo path daalna
+import logo from "../images/logo transparent.webp"; // apna logo path daalna
 export default function Footer() {
   return (
     <footer className="bg-[#003366] text-white py-10 px-6">

@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from "react";
 import axiosInstance from "../api/axiosInstance";
+import { useNavigate } from "react-router-dom";
+
 
 const SkillProgramDetails = () => {
   /* ================= EXISTING PROGRAMS ================= */
   const [programs, setPrograms] = useState([]);
   const [selectedProgram, setSelectedProgram] = useState(null);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
 
   useEffect(() => {
   axiosInstance
@@ -96,6 +100,14 @@ const SkillProgramDetails = () => {
   return (
     <div className="min-h-screen bg-gray-50 p-4">
       <div className="max-w-6xl mx-auto space-y-8">
+<div className="flex justify-start mb-4">
+  <button
+    onClick={() => navigate("/program-course")}
+    className="bg-gray-800 text-white px-4 py-2 rounded text-sm hover:bg-gray-900"
+  >
+    ← View Program Courses
+  </button>
+</div>
 
         {/* ================= SELECT PROGRAM ================= */}
         <div className="bg-white rounded-lg shadow p-4">
@@ -114,7 +126,7 @@ const SkillProgramDetails = () => {
             <option value="">-- Select Program --</option>
             {programs.map((p) => (
               <option key={p._id} value={p._id}>
-                {p.title}
+                {p.name}
               </option>
             ))}
           </select>

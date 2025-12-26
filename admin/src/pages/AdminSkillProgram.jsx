@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
   
 
 const AdminSkillProgram = () => {
-  const [title, setTitle] = useState("");
+  const [name, setTitle] = useState("");
   const [image, setImage] = useState(null);
   const [programs, setPrograms] = useState([]);
   const [message, setMessage] = useState("");
@@ -36,13 +36,13 @@ const AdminSkillProgram = () => {
     setMessage("");
     setError("");
 
-    if (!title) {
+    if (!name) {
       setError("Title is required");
       return;
     }
 
     const formData = new FormData();
-    formData.append("title", title);
+    formData.append("title", name);
     if (image) formData.append("image", image);
 
 // Inside handleSubmit
@@ -87,7 +87,7 @@ try {
   // Edit program
   const handleEdit = (program) => {
     setEditId(program._id);
-    setTitle(program.title);
+    setTitle(program.name);
     setPreviewImage(`https://api.iist.ind.in/uploads/${program.image}`);
     setImage(null);
   };
@@ -120,7 +120,7 @@ try {
           <input
             type="text"
             placeholder="Program Title"
-            value={title}
+            value={name}
             onChange={(e) => setTitle(e.target.value)}
             className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
@@ -188,7 +188,7 @@ try {
                   >
                     <td className="px-4 py-3 text-sm text-gray-600">{index + 1}</td>
                     <td className="px-4 py-3 text-sm font-semibold text-blue-900">
-                      {p.title}
+                      {p.name}
                     </td>
                     <td className="px-4 py-3">
                       {p.image ? (

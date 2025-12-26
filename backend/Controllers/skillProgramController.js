@@ -26,9 +26,16 @@ export const addSkillProgram = async (req, res) => {
 export const getSkillPrograms = async (req, res) => {
   try {
     const programs = await SkillProgram.find().sort({ createdAt: -1 });
-    res.status(200).json(programs);
+
+    const formatted = programs.map(p => ({
+      _id: p._id,
+      name: p.title,   // 👈 alias
+      image: p.image,
+      createdAt: p.createdAt
+    }));
+
+    res.status(200).json(formatted);
   } catch (error) {
-    console.error(error);
     res.status(500).json({ message: "Server error" });
   }
 };

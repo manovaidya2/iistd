@@ -10,7 +10,7 @@ const CourseSection = ({ title, courses }) => {
       <div className="w-full max-w-4xl rounded-xl shadow-lg overflow-hidden bg-white">
 
         {/* Heading CENTER */}
-        <div className="bg-blue-900 text-white px-6 py-4 text-lg font-semibold text-center">
+        <div className="bg-[#003366] text-white px-6 py-4 text-lg font-semibold text-center">
           {title}
         </div>
 
@@ -65,8 +65,23 @@ export default function SkillProgramDetails() {
     return <p className="text-center mt-10">Loading...</p>;
   }
 
-  return (
-    <div className="max-w-6xl mx-auto px-4 py-10">
+return (
+  <div>
+    {/* HERO */}
+    <div className="bg-[#003366] text-white py-16 mb-12">
+      <div className="max-w-6xl mx-auto px-4 text-center">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-4">
+          Skill Development Programs
+        </h1>
+        <p className="text-sm sm:text-base max-w-3xl mx-auto opacity-90">
+          Explore our industry-oriented certificate, diploma and advanced diploma
+          programs designed to enhance your professional skills.
+        </p>
+      </div>
+    </div>
+
+    {/* COURSES */}
+    <div className="max-w-6xl mx-auto px-4 pb-10">
       <CourseSection
         title="Certificate Courses"
         courses={courses.certificate}
@@ -80,5 +95,7 @@ export default function SkillProgramDetails() {
         courses={courses.advancedDiploma}
       />
     </div>
-  );
+  </div>
+);
+
 }
