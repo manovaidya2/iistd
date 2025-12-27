@@ -69,7 +69,7 @@ const Sidebar = () => {
                   <li><Link to="/instruction-form" className="block hover:text-blue-400">Instruction Form</Link></li>
                   <li>
                     <a
-                      href="/forms/all-forms.pdf"
+                      href="/form-upload"
                       target="_blank"
                       className="block hover:text-green-400"
                     >

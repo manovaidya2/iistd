@@ -15,6 +15,7 @@ import SkillProgramDetails from "./pages/SkillProgramDetails";
 import ProgramListWithCourses from "./pages/ProgramListWithCourses";
 import AdminAdmissionList from "./pages/AdminAdmissionList";
 import ExaminationData from "./pages/ExaminationData";
+import FormUploadPage from "./pages/FormUploadPage";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/program-course"element={<Layout><ProgramListWithCourses /></Layout>} />
           <Route path="/admin-admission-list" element={<Layout><AdminAdmissionList /></Layout>} />
           <Route path="/examination-data" element={<Layout><ExaminationData /></Layout>} />
+          <Route path="/form-upload" element={<Layout><FormUploadPage/></Layout>} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>
