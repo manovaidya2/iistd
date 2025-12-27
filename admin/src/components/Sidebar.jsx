@@ -73,7 +73,7 @@ const Sidebar = () => {
                       target="_blank"
                       className="block hover:text-green-400"
                     >
-                      Download All Form PDFs
+                      Upload Form 
                     </a>
                   </li>
                 </ul>
