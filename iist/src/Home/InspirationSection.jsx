@@ -22,8 +22,8 @@ export default function InspirationSection() {
             />
             <p className="text-gray-800 leading-relaxed">
               Prime Minister Modi's launch of the Skill India campaign inspired
-              IISD to focus on building a skilled workforce. His emphasis on
-              quality education motivated IISD to create industry-relevant
+              IIST to focus on building a skilled workforce. His emphasis on
+              quality education motivated IIST to create industry-relevant
               programs for students and educators.
             </p>
           </div>
@@ -37,7 +37,7 @@ export default function InspirationSection() {
             />
             <p className="text-gray-800 leading-relaxed">
               Dr. Kalam’s vision of empowering India through skill development
-              inspires IISD to expand the nation's skill ecosystem. We emphasize
+              inspires IIST to expand the nation's skill ecosystem. We emphasize
               continuous learning and applying the right skills, following Dr.
               Kalam’s guiding principles.
             </p>
@@ -58,7 +58,7 @@ export default function InspirationSection() {
               className="w-full md:w-36 md:h-36 h-auto object-contain"
             />
             <p className="text-gray-800 leading-relaxed">
-              The Indian Institute of Skill Development (IISD) was founded with
+              The Indian Institute of Skill Training (IIST) was founded with
               a mission to bridge the skill gap in India through quality
               training and online certification programs. Our mission is to help
               students and professionals gain the practical skills they need for
@@ -75,7 +75,7 @@ export default function InspirationSection() {
           </p>
 
           <p className="text-gray-800 leading-relaxed mb-6">
-            IISD is an autonomous institution focused on providing intensive
+            IIST is an autonomous institution focused on providing intensive
             training in job-oriented fields such as Computer & IT, Fashion &
             Interior Designing, Business Management, Hotel Management, Teacher
             Training, and various technical skills.

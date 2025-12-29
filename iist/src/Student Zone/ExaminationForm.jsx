@@ -174,7 +174,7 @@ export default function ExaminationForm() {
       className="w-full max-w-4xl mx-auto p-6 bg-white shadow-xl rounded-2xl border"
     >
       <h1 className="text-3xl font-bold text-center mb-6">
-        IISD – Examination Form
+        IIST – Examination Form
       </h1>
 
       {/* Section A */}
@@ -519,7 +519,7 @@ export default function ExaminationForm() {
         <p>
           I hereby declare that all information provided is true. I have fulfilled
           the eligibility criteria for the examination. I agree to follow all
-          examination rules of IISD.
+          examination rules of IIST.
         </p>
       </label>
 

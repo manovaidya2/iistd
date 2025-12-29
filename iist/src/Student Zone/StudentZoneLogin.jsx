@@ -64,10 +64,10 @@ export default function StudentZoneLogin() {
           <div className="text-center mb-6 px-2 sm:px-0">
             <img src={logo} alt="IIST Logo" className="mx-auto w-24 sm:w-28 h-24 sm:h-28 mb-4" />
             <h1 className="text-base sm:text-xl md:text-2xl lg:text-2xl font-semibold text-gray-800 text-center whitespace-normal md:whitespace-nowrap">
-              INDIAN INSTITUTE OF SKILL DEVELOPMENT
+              INDIAN INSTITUTE OF SKILLS TRAINING
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-gray-700 font-medium mt-1">
-              भारतीय कौशल विकास संस्थान
+               भारतीय कौशल प्रशिक्षण संस्थान
             </p>
             <h2 className="text-2xl sm:text-3xl font-semibold text-black mt-3 tracking-wide">
               STUDENT LOGIN

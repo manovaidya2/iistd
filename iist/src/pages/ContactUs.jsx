@@ -47,7 +47,7 @@ export default function ContactUs() {
           We value your feedback and are here to assist you with any queries or
           concerns you may have. Whether you're interested in accreditation,
           courses, or any other inquiries related to the Indian Institute of
-          Skill Development (IISD), our dedicated team is ready to help you.
+          Skill Training (IIST), our dedicated team is ready to help you.
         </p>
 
         {/* ====== CONTACT INFO ====== */}

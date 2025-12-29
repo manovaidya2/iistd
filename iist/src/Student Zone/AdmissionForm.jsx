@@ -65,7 +65,7 @@ fd.append("digitalStudentSignature", digitalSign);
   <div className="p-8 max-w-5xl mx-auto my-10 bg-white shadow-2xl rounded-2xl border">
 
       <h1 className="text-4xl font-bold mb-6 text-center text-blue-700">
-        IISD – Student Admission Form
+        IIST – Student Admission Form
       </h1>
 
       <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -12,10 +12,16 @@ export default function OnDemandRegistration() {
 
         {/* Headings */}
         <h1 className="text-center text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-800 mb-2">
-          भारतीय कौशल विकास संस्थान
+           भारतीय कौशल प्रशिक्षण संस्थान
         </h1>
         <h2 className="text-center text-xl sm:text-2xl font-medium text-blue-800 mb-3">
-          INDIAN INSTITUTE OF SKILL DEVELOPMENT
+        <h1 className="text-center text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-800 mb-2">
+  भारतीय कौशल प्रशिक्षण संस्थान
+</h1>
+<h2 className="text-center text-xl sm:text-2xl font-medium text-blue-800 mb-3">
+  INDIAN INSTITUTE OF SKILLS TRAINING
+</h2>
+
         </h2>
         <p className="text-center text-base sm:text-lg text-gray-500 mb-6">
           (FOR SKILLED & EXPERIENCED CANDIDATES)
