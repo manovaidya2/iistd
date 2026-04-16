@@ -16,6 +16,8 @@ import ProgramListWithCourses from "./pages/ProgramListWithCourses";
 import AdminAdmissionList from "./pages/AdminAdmissionList";
 import ExaminationData from "./pages/ExaminationData";
 import FormUploadPage from "./pages/FormUploadPage";
+import AdminDeclarationList from "./pages/AdminDeclarationList";
+import ReissueFormTable from "./pages/ReissueFormTable";
 
 function App() {
   return (
@@ -34,6 +36,9 @@ function App() {
           <Route path="/admin-admission-list" element={<Layout><AdminAdmissionList /></Layout>} />
           <Route path="/examination-data" element={<Layout><ExaminationData /></Layout>} />
           <Route path="/form-upload" element={<Layout><FormUploadPage/></Layout>} />
+          <Route path="/declaration-list" element={<Layout><AdminDeclarationList/></Layout>} />
+          <Route path="/reissue-form" element={<Layout><ReissueFormTable/></Layout>} />
+
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>

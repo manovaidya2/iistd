@@ -10,6 +10,8 @@ import skillProgramCourseRoutes from "./Routes/skillProgramCourseRoutes.js";
 import admissionRoutes from "./Routes/admissionRoutes.js";
 import examinationRoutes from "./Routes/examinationRoutes.js";
 import formUploadRoutes from "./Routes/formUploadRoutes.js";
+import declarationRoutes from "./Routes/declarationRoutes.js";
+
 
 dotenv.config();
 
@@ -47,6 +49,7 @@ app.use("/api/skillprogramdetails", skillProgramCourseRoutes);
 app.use("/api", examinationRoutes);
 app.use("/api", admissionRoutes); 
 app.use("/api/forms", formUploadRoutes);
+app.use("/api", declarationRoutes);
 
 // DB Connect
 mongoose
