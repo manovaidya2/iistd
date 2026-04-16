@@ -55,19 +55,19 @@ export default function ContactUs() {
           <p className="mb-2 text-lg font-semibold">
             Address:{" "}
             <span className="font-normal">
-              Indian Institute of Skill Development (IISD)
+              Eduglobe Services FZ LLC ,SBC, 2nd Al KAZIM Building 3 HOR Al ANZ East,  Dubai, United Arab Emirates Near Al Qiyadah metro station.
             </span>
           </p>
           <p className="mb-1">
             <span className="font-semibold">Phone:</span>
           </p>
           <ul className="ml-4 mb-3">
-            <li>For general inquiries: +91 8882408906</li>
-            <li>For admissions and accreditation: +91-XXXX-XXXXXX</li>
+            <li>For general inquiries: +91 8677920337</li>
+            <li>For admissions and accreditation: +91-8677920337</li>
           </ul>
           <p>
             <span className="font-semibold">Email:</span>{" "}
-            <span className="font-normal">testing@gmail.com</span>
+            <span className="font-normal">info@iist.ind.in</span>
           </p>
         </div>
 

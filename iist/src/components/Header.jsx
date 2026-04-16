@@ -21,7 +21,7 @@ const Header = () => {
   {/* ✅ Mobile Top Contact Bar (sabse upar) */}
   <div className="md:hidden bg-[#003366] text-white text-xs px-4 py-1 flex justify-between items-center">
     <span className="flex items-center gap-2">
-      <FaPhoneAlt className="text-[10px]" /> +91-8130543714
+      <FaPhoneAlt className="text-[10px]" /> +91-8677920337
     </span>
     <span className="flex items-center gap-2">
       <FaEnvelope className="text-[10px]" /> info@gmail.com
@@ -61,7 +61,7 @@ const Header = () => {
     {/* ✅ Desktop Topbar (unchanged) */}
     <div className="hidden md:flex items-center gap-4 md:gap-6">
       <span className="flex items-center gap-2">
-        <FaPhoneAlt /> +91-8130543714
+        <FaPhoneAlt /> +91-8677920337
       </span>
       <span className="flex items-center gap-2">
         <FaEnvelope /> info@gmail.com
