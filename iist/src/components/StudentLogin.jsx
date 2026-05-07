@@ -91,7 +91,7 @@ export default function StudentLogin() {
 
             <div className="mb-4">
               <label className="block text-white font-semibold mb-2">
-                Roll No
+               Enrollment No / Roll No
               </label>
               <input
                 type="text"

@@ -13,15 +13,15 @@ const studentSchema = new mongoose.Schema({
   result: {
     course: String,
     name: String,
-    rollNo: String,
-    enrollmentNo: String,
+     rollNo: { type: String, index: true },
+ enrollmentNo: { type: String, index: true },
     fatherName: String,
     srNo: String,
     session: { type: String, required: true }, // session = password
     subjects: [subjectSchema],
     totalFull: Number,
     totalPass: Number,
-    totalObt: Number,
+    totalObt: Number, 
     remarks: String,
     percentage: String,
     grade: String,
