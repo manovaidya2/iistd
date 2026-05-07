@@ -49,10 +49,10 @@ export default function StudentResult({ studentData }) {
           {/* Student Details */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 mb-6 text-sm">
             <p><strong>Name:</strong> {studentData.result.name}</p>
-            <p><strong>Roll No:</strong> {studentData.result.rollNo}</p>
+            {/* <p><strong>Roll No:</strong> {studentData.result.rollNo}</p> */}
             <p><strong>Father's Name:</strong> {studentData.result.fatherName}</p>
             <p><strong>Enrollment No:</strong> {studentData.result.enrollmentNo}</p>
-            <p><strong>Sr. No:</strong> {studentData.result.srNo}</p>
+            {/* <p><strong>Sr. No:</strong> {studentData.result.srNo}</p> */}
             <p><strong>Session:</strong> {studentData.result.session}</p>
           </div>
 

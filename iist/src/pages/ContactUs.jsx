@@ -62,8 +62,8 @@ export default function ContactUs() {
             <span className="font-semibold">Phone:</span>
           </p>
           <ul className="ml-4 mb-3">
-            <li>For general inquiries: +91 8677920337</li>
-            <li>For admissions and accreditation: +91-8677920337</li>
+            <li>For general inquiries: +91 8882408906</li>
+            <li>For admissions and accreditation: +91-8882408906</li>
           </ul>
           <p>
             <span className="font-semibold">Email:</span>{" "}

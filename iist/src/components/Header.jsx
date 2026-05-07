@@ -21,10 +21,10 @@ const Header = () => {
   {/* ✅ Mobile Top Contact Bar (sabse upar) */}
   <div className="md:hidden bg-[#003366] text-white text-xs px-4 py-1 flex justify-between items-center">
     <span className="flex items-center gap-2">
-      <FaPhoneAlt className="text-[10px]" /> +91-8677920337
+      <FaPhoneAlt className="text-[10px]" /> +91-8882408906
     </span>
     <span className="flex items-center gap-2">
-      <FaEnvelope className="text-[10px]" /> info@gmail.com
+      <FaEnvelope className="text-[10px]" /> info@iist.ind.in
     </span>
   </div>
 <div className="md:hidden bg-[#003366] text-white text-xs px-4 py-1 flex justify-between items-center">
@@ -61,10 +61,10 @@ const Header = () => {
     {/* ✅ Desktop Topbar (unchanged) */}
     <div className="hidden md:flex items-center gap-4 md:gap-6">
       <span className="flex items-center gap-2">
-        <FaPhoneAlt /> +91-8677920337
+        <FaPhoneAlt /> +91-8882408906
       </span>
       <span className="flex items-center gap-2">
-        <FaEnvelope /> info@gmail.com
+        <FaEnvelope /> info@iist.ind.in
       </span>
     </div>
     <div className="hidden md:flex items-center gap-4 text-lg">
