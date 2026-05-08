@@ -16,25 +16,33 @@ export default function DownloadsSection() {
         console.error("Error fetching brochures:", error);
       }
     };
+
     fetchBrochures();
   }, [id]);
 
   // ✅ Corrected download handler
   const handleDownload = async (file) => {
     try {
-      const baseURL = import.meta.env.VITE_API_BASE_URL || "https://api.iisd.io";
+      const baseURL =
+        import.meta.env.VITE_API_BASE_URL || "https://api.iisd.io";
+
       const fileURL = `${baseURL}/uploads/brochures/${file}`; // ✅ Corrected path
 
       console.log("📥 Downloading from:", fileURL);
 
-      const response = await axiosInstance.get(fileURL, { responseType: "blob" });
+      const response = await axiosInstance.get(fileURL, {
+        responseType: "blob",
+      });
+
       const blob = new Blob([response.data], { type: "application/pdf" });
 
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement("a");
+
       link.href = url;
       link.download = file; // Use original filename
       link.click();
+
       window.URL.revokeObjectURL(url);
     } catch (error) {
       console.error("❌ Error downloading brochure:", error);
@@ -43,109 +51,124 @@ export default function DownloadsSection() {
   };
 
   return (
-    <section className="bg-[#f9fafc] py-10 px-6 md:px-12">
-      <div className="max-w-5xl mx-auto text-center space-y-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#1a4e92]">
-          Downloads & Forms
-        </h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">
-          Access important documents, admission and examination forms, and official brochures below.
-        </p>
+    <section className="bg-[#f9fafc] py-8 sm:py-10 md:py-12 px-4 sm:px-6 md:px-12 overflow-hidden">
+      <div className="max-w-6xl mx-auto text-center space-y-6 sm:space-y-8 md:space-y-10">
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+        <div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1a4e92] leading-tight">
+            Downloads & Forms
+          </h2>
 
-  {/* Brochure Download Buttons */}
-  {brochures.length > 0 ? (
-    brochures.map((file, index) => (
-      <button
-        key={index}
-        onClick={() => handleDownload(file)}
-        className="bg-[#1a4e92] text-white py-6 px-5 rounded-2xl shadow-md 
-                   hover:shadow-lg hover:scale-[1.03] transition-transform 
-                   flex flex-col items-center justify-center gap-3"
-      >
-        <FaDownload className="text-2xl" />
-        <span className="font-semibold text-lg">Download Brochure</span>
-      </button>
-    ))
-  ) : (
-    <p className="text-gray-500 col-span-4">No brochures available for this program.</p>
-  )}
+          <p className="mt-3 text-gray-600 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed px-1">
+            Access important documents, admission and examination forms, and
+            official brochures below.
+          </p>
+        </div>
 
-  {/* Static Buttons with Correct Icons */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5 md:gap-6 mt-6 sm:mt-8">
 
-  <a
-    href="/admission-form"
-    className="bg-[#16437d] text-white py-6 px-5 rounded-2xl shadow-md hover:shadow-lg 
-               hover:scale-[1.03] transition-transform flex flex-col items-center 
-               justify-center gap-3"
-  >
-    <FaFileSignature className="text-2xl" />
-    <span className="font-semibold text-lg">Student Admission Form</span>
-  </a>
+          {/* Brochure Download Buttons */}
+          {brochures.length > 0 ? (
+            brochures.map((file, index) => (
+              <button
+                key={index}
+                onClick={() => handleDownload(file)}
+                className="w-full min-h-[118px] sm:min-h-[140px] md:min-h-[155px] bg-[#1a4e92] text-white p-3.5 sm:p-5 rounded-xl sm:rounded-2xl shadow-md hover:shadow-lg hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 flex flex-col items-center justify-center gap-2 sm:gap-3 text-center"
+              >
+                <FaDownload className="text-xl sm:text-2xl shrink-0" />
 
-  <a
-    href="/examination-form"
-    className="bg-[#123764] text-white py-6 px-5 rounded-2xl shadow-md hover:shadow-lg 
-               hover:scale-[1.03] transition-transform flex flex-col items-center 
-               justify-center gap-3"
-  >
-    <FaFileAlt className="text-2xl" />
-    <span className="font-semibold text-lg">Exam Form</span>
-  </a>
+                <span className="font-semibold text-xs sm:text-base md:text-lg leading-snug break-words">
+                  Download Brochure
+                </span>
+              </button>
+            ))
+          ) : (
+            <p className="text-gray-500 text-sm sm:text-base col-span-2 sm:col-span-2 md:col-span-3 lg:col-span-4">
+              No brochures available for this program.
+            </p>
+          )}
 
-  <a
-    href="/self-declaration-form"
-    className="bg-[#123764] text-white py-6 px-5 rounded-2xl shadow-md hover:shadow-lg 
-               hover:scale-[1.03] transition-transform flex flex-col items-center 
-               justify-center gap-3"
-  >
-    <FaFileAlt className="text-2xl" />
-    <span className="font-semibold text-lg">Self Declaration</span>
-  </a>
+          {/* Static Buttons with Correct Icons */}
 
-  <a
-    href="/certificate-reissue-form"
-    className="bg-[#123764] text-white py-6 px-5 rounded-2xl shadow-md hover:shadow-lg 
-               hover:scale-[1.03] transition-transform flex flex-col items-center 
-               justify-center gap-3"
-  >
-    <FaFileAlt className="text-2xl" />
-    <span className="font-semibold text-lg">Certificate Reissue Form</span>
-  </a>
+          <a
+            href="/admission-form"
+            className="w-full min-h-[118px] sm:min-h-[140px] md:min-h-[155px] bg-[#16437d] text-white p-3.5 sm:p-5 rounded-xl sm:rounded-2xl shadow-md hover:shadow-lg hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 flex flex-col items-center justify-center gap-2 sm:gap-3 text-center"
+          >
+            <FaFileSignature className="text-xl sm:text-2xl shrink-0" />
 
-  <a
-    href="/intership-form"
-    className="bg-[#123764] text-white py-6 px-5 rounded-2xl shadow-md hover:shadow-lg 
-               hover:scale-[1.03] transition-transform flex flex-col items-center 
-               justify-center gap-3"
-  >
-    <FaFileAlt className="text-2xl" />
-    <span className="font-semibold text-lg">Internship Form</span>
-  </a>
+            <span className="font-semibold text-xs sm:text-base md:text-lg leading-snug break-words">
+              Student Admission Form
+            </span>
+          </a>
 
-  <a
-    href="/medium-of-instruction-form"
-    className="bg-[#123764] text-white py-6 px-5 rounded-2xl shadow-md hover:shadow-lg 
-               hover:scale-[1.03] transition-transform flex flex-col items-center 
-               justify-center gap-3"
-  >
-    <FaFileAlt className="text-2xl" />
-    <span className="font-semibold text-lg">Instruction Form</span>
-  </a>
+          <a
+            href="/examination-form"
+            className="w-full min-h-[118px] sm:min-h-[140px] md:min-h-[155px] bg-[#123764] text-white p-3.5 sm:p-5 rounded-xl sm:rounded-2xl shadow-md hover:shadow-lg hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 flex flex-col items-center justify-center gap-2 sm:gap-3 text-center"
+          >
+            <FaFileAlt className="text-xl sm:text-2xl shrink-0" />
 
-  <a
-    href="/form-download"
-    className="bg-[#123764] text-white py-6 px-5 rounded-2xl shadow-md hover:shadow-lg 
-               hover:scale-[1.03] transition-transform flex flex-col items-center 
-               justify-center gap-3"
-  >
-    <FaDownload className="text-2xl" />
-    <span className="font-semibold text-lg">Download All Form PDFs</span>
-  </a>
-</div>
+            <span className="font-semibold text-xs sm:text-base md:text-lg leading-snug break-words">
+              Exam Form
+            </span>
+          </a>
 
+          <a
+            href="/self-declaration-form"
+            className="w-full min-h-[118px] sm:min-h-[140px] md:min-h-[155px] bg-[#123764] text-white p-3.5 sm:p-5 rounded-xl sm:rounded-2xl shadow-md hover:shadow-lg hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 flex flex-col items-center justify-center gap-2 sm:gap-3 text-center"
+          >
+            <FaFileAlt className="text-xl sm:text-2xl shrink-0" />
+
+            <span className="font-semibold text-xs sm:text-base md:text-lg leading-snug break-words">
+              Self Declaration
+            </span>
+          </a>
+
+          <a
+            href="/certificate-reissue-form"
+            className="w-full min-h-[118px] sm:min-h-[140px] md:min-h-[155px] bg-[#123764] text-white p-3.5 sm:p-5 rounded-xl sm:rounded-2xl shadow-md hover:shadow-lg hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 flex flex-col items-center justify-center gap-2 sm:gap-3 text-center"
+          >
+            <FaFileAlt className="text-xl sm:text-2xl shrink-0" />
+
+            <span className="font-semibold text-xs sm:text-base md:text-lg leading-snug break-words">
+              Certificate Reissue Form
+            </span>
+          </a>
+
+          <a
+            href="/intership-form"
+            className="w-full min-h-[118px] sm:min-h-[140px] md:min-h-[155px] bg-[#123764] text-white p-3.5 sm:p-5 rounded-xl sm:rounded-2xl shadow-md hover:shadow-lg hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 flex flex-col items-center justify-center gap-2 sm:gap-3 text-center"
+          >
+            <FaFileAlt className="text-xl sm:text-2xl shrink-0" />
+
+            <span className="font-semibold text-xs sm:text-base md:text-lg leading-snug break-words">
+              Internship Form
+            </span>
+          </a>
+
+          <a
+            href="/medium-of-instruction-form"
+            className="w-full min-h-[118px] sm:min-h-[140px] md:min-h-[155px] bg-[#123764] text-white p-3.5 sm:p-5 rounded-xl sm:rounded-2xl shadow-md hover:shadow-lg hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 flex flex-col items-center justify-center gap-2 sm:gap-3 text-center"
+          >
+            <FaFileAlt className="text-xl sm:text-2xl shrink-0" />
+
+            <span className="font-semibold text-xs sm:text-base md:text-lg leading-snug break-words">
+              Instruction Form
+            </span>
+          </a>
+
+          <a
+            href="/form-download"
+            className="w-full min-h-[118px] sm:min-h-[140px] md:min-h-[155px] bg-[#123764] text-white p-3.5 sm:p-5 rounded-xl sm:rounded-2xl shadow-md hover:shadow-lg hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 flex flex-col items-center justify-center gap-2 sm:gap-3 text-center"
+          >
+            <FaDownload className="text-xl sm:text-2xl shrink-0" />
+
+            <span className="font-semibold text-xs sm:text-base md:text-lg leading-snug break-words">
+              Download All Form PDFs
+            </span>
+          </a>
+
+        </div>
       </div>
     </section>
   );
-}      
+}
